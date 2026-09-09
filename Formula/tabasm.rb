@@ -11,7 +11,10 @@ class Tabasm < Formula
   depends_on :macos
 
   def install
-    bin.install "tabasm", "tab1to2"
+    # The assembler alone. Release archives from 2026.9.1 also carry tab1to2,
+    # the legacy table converter, but later ones do not: converting is
+    # optional, since the assembler reads a legacy table directly.
+    bin.install "tabasm"
     # pkgshare is <prefix>/share/tabasm. Run from <prefix>/bin, the assembler
     # looks there for its tables, so nothing needs configuring -- no wrapper
     # script and no environment variable.
