@@ -3,8 +3,16 @@
 Homebrew formulae for [dg1yfe](https://github.com/dg1yfe)'s tools.
 
 ```
+brew trust dg1yfe/tap
 brew tap dg1yfe/tap
 ```
+
+Homebrew 6 refuses to load formulae from a third-party tap until it is trusted.
+Without the first command, `brew tap` fails with *Refusing to load formula from
+untrusted tap*, followed by *invalid syntax in tap* — which points at the
+formula rather than at the trust setting, so it is worth knowing in advance.
+Trust one formula instead of the whole tap with
+`brew trust --formula dg1yfe/tap/tabasm`.
 
 ## Formulae
 
@@ -12,7 +20,7 @@ brew tap dg1yfe/tap
 |---|---|
 | [tabasm](https://github.com/dg1yfe/tabasm) | Table-driven cross-assembler for 8- and early-16-bit microprocessors. Twelve targets, five object formats. |
 
-Install one without tapping first:
+Or install one directly, once the tap is trusted:
 
 ```
 brew install dg1yfe/tap/tabasm
