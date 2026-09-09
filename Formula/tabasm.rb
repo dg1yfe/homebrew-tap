@@ -1,9 +1,9 @@
 class Tabasm < Formula
   desc "Table-driven cross-assembler for 8- and 16-bit microprocessors"
   homepage "https://github.com/dg1yfe/tabasm"
-  url "https://github.com/dg1yfe/tabasm/releases/download/v2026.9.1/tabasm-2026.9.1-universal-macos.tar.gz"
-  version "2026.9.1"
-  sha256 "50b3816b18e626e726b8699e881d426bae7f502de76b1a086a11a3e8ccd30e8e"
+  url "https://github.com/dg1yfe/tabasm/releases/download/v2026.9.2/tabasm-2026.9.2-universal-macos.tar.gz"
+  version "2026.9.2"
+  sha256 "3dd9cf13cf6831f721a61f39da124f97f077c648b98240fcc18f8a0f4f5d63c5"
   license "BSD-3-Clause"
 
   # The release archive holds a universal binary, so one download serves both
@@ -11,9 +11,6 @@ class Tabasm < Formula
   depends_on :macos
 
   def install
-    # The assembler alone. Release archives from 2026.9.1 also carry tab1to2,
-    # the legacy table converter, but later ones do not: converting is
-    # optional, since the assembler reads a legacy table directly.
     bin.install "tabasm"
     # pkgshare is <prefix>/share/tabasm. Run from <prefix>/bin, the assembler
     # looks there for its tables, so nothing needs configuring -- no wrapper
