@@ -1,9 +1,9 @@
 class Tabasm < Formula
   desc "Table-driven cross-assembler for 8- and 16-bit microprocessors"
   homepage "https://github.com/dg1yfe/tabasm"
-  url "https://github.com/dg1yfe/tabasm/releases/download/v2026.9.2/tabasm-2026.9.2-universal-macos.tar.gz"
-  version "2026.9.2"
-  sha256 "3dd9cf13cf6831f721a61f39da124f97f077c648b98240fcc18f8a0f4f5d63c5"
+  url "https://github.com/dg1yfe/tabasm/releases/download/v2026.9.3/tabasm-2026.9.3-universal-macos.tar.gz"
+  version "2026.9.3"
+  sha256 "acdabcc134d0fb1ba6fdf96666035ea48d106305208d067a06020919acc59210"
   license "BSD-3-Clause"
 
   # The release archive holds a universal binary, so one download serves both
